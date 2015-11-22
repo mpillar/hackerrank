@@ -1,5 +1,3 @@
-import sys
-
 def parse():
     n = int(input().strip())
     matrix = []
