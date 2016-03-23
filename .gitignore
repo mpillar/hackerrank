@@ -1,3 +1,4 @@
 *.class
 *.pyc
 .idea
+a.out

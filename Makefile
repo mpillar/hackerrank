@@ -4,5 +4,6 @@ all:
 	./.run.sh
 
 clean:
-	rm -f `find . -name *.pyc`
-	rm -f `find . -name *.class`
+	find . -name *.pyc | xargs rm -rf
+	find . -name *.class | xargs rm -rf
+	find . -name *.pyc | xargs rm -rf
