@@ -1,5 +1,5 @@
 def compute_max_hourglass_sum(data):
-    result = -9 * 7 # Lowest possible value
+    result = -9 * 7  # Lowest possible value
     for i in range(1, 5):
         for j in range(1, 5):
             hourglass_sum = data[i-1][j-1] + data[i-1][j] + data[i-1][j+1] + \
