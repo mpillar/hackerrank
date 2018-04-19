@@ -12,35 +12,36 @@
  return back the head of the linked list in the below method.
 """
 
-def MergeLists(headA, headB):
+
+def MergeLists(head_a, head_b):
 
     last_node = None
     first_node = None
 
-    while headA is not None or headB is not None:
-        if headA is None:
-            first_node = headB if first_node is None else first_node
+    while head_a is not None or head_b is not None:
+        if head_a is None:
+            first_node = head_b if first_node is None else first_node
             if last_node is not None:
-                last_node.next = headB
-            last_node = headB
-            headB = headB.next
-        elif headB is None:
-            first_node = headA if first_node is None else first_node
+                last_node.next = head_b
+            last_node = head_b
+            head_b = head_b.next
+        elif head_b is None:
+            first_node = head_a if first_node is None else first_node
             if last_node is not None:
-                last_node.next = headA
-            last_node = headA
-            headA = headA.next
-        elif headA.data < headB.data:
-            first_node = headA if first_node is None else first_node
+                last_node.next = head_a
+            last_node = head_a
+            head_a = head_a.next
+        elif head_a.data < head_b.data:
+            first_node = head_a if first_node is None else first_node
             if last_node is not None:
-                last_node.next = headA
-            last_node = headA
-            headA = headA.next
+                last_node.next = head_a
+            last_node = head_a
+            head_a = head_a.next
         else:
-            first_node = headB if first_node is None else first_node
+            first_node = head_b if first_node is None else first_node
             if last_node is not None:
-                last_node.next = headB
-            last_node = headB
-            headB = headB.next
+                last_node.next = head_b
+            last_node = head_b
+            head_b = head_b.next
 
     return first_node
