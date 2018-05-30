@@ -1,4 +1,4 @@
-def gradingStudents(grades):
+def grading_students(grades):
     result = []
     for grade in grades:
         if grade < 38:
@@ -12,10 +12,14 @@ def gradingStudents(grades):
     return result
 
 
-if __name__ == '__main__':
+def main():
     test_cases = int(input())
     grades = []
     for t in range(test_cases):
         grades.append(int(input()))
-    grades = gradingStudents(grades)
+    grades = grading_students(grades)
     print("\n".join(map(str, grades)))
+
+
+if __name__ == '__main__':
+    main()
