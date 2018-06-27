@@ -1,4 +1,4 @@
-.PHONY: all
+.PHONY: all clean
 
 all: a.out
 	cat input.txt | ./a.out
